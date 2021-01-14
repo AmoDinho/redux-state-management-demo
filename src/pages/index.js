@@ -18,4 +18,10 @@ const mapStateToProps = (state, ownProps) => {
     layout: state.pageHeader,
   };
 };
-export default Index;
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setPageMetadata: bindActionCreators(layoutActions.setPageHeader, dispatch),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Index);
