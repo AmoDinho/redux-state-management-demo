@@ -14,6 +14,7 @@ const Index = () => {
 };
 
 const mapStateToProps = (state, ownProps) => {
+  console.log("state", state);
   return {
     layout: state.pageHeader,
   };

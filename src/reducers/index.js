@@ -1,8 +1,8 @@
-import layout from "./layoutReducer";
+import { layoutsReducer } from "./layoutReducer";
 import { combineReducers } from "redux";
 import { connectRouter } from "connected-react-router";
 export default (history) =>
   combineReducers({
     router: connectRouter(history),
-    layout,
+    layoutsReducer,
   });
