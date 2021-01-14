@@ -1,6 +1,5 @@
 import { applyMiddleware, createStore } from "redux";
 import { persistReducer, persistStore } from "redux-persist";
-
 import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2";
 import initialState from "../reducers/initialState";
 import reduxImmutableStateInvariant from "redux-immutable-state-invariant";

@@ -1,3 +1,3 @@
 export default {
-  pageHeader: "",
+  pageHeader: "Home",
 };
