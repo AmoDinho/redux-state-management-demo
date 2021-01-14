@@ -13,7 +13,12 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "build:style": "postcss src/styles/index.css -o src/styles/tailwind.css",
