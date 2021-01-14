@@ -3,7 +3,7 @@ import { persistReducer, persistStore } from "redux-persist";
 
 import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2";
 import { createBrowserHistory } from "history";
-import { initialState } from "../reducers/initialState";
+import initialState from "../reducers/initialState";
 import reduxImmutableStateInvariant from "redux-immutable-state-invariant";
 import rootReducer from "../reducers";
 import storage from "redux-persist/lib/storage";
