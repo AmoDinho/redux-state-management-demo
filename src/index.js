@@ -5,6 +5,12 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
+import { history, persistor, store } from "./store";
+import { ConnectedRouter } from "connected-react-router";
+import { PersistGate } from "redux-persist/integration/react";
+import { Provider } from "react-redux";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
 //add the uri here
 const client = new ApolloClient({
