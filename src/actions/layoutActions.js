@@ -4,9 +4,7 @@ export const setPageHeader = (pageTitle) => {
   const dispatchResult = (dispatch) => {
     dispatch({
       type: types.SET_PAGE_HEADER,
-      result: {
-        pageTitle,
-      },
+      result: pageTitle,
     });
   };
   return dispatchResult;
