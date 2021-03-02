@@ -1,13 +1,12 @@
 import * as layoutActions from "./actions/layoutActions";
-import React .{useEffect}from "react";
+import React from "react";
 import Routes from "./routes";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 const App = (props) => {
-
   return (
     <div>
-        <p>{props.layout}</p>
+      <p>{props.layout}</p>
       <Routes />
     </div>
   );
