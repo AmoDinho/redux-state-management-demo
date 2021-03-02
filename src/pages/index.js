@@ -11,10 +11,8 @@ const Index = (props) => {
   }, []);
   return (
     <>
-      {props.layout}
-
       <HeadingOne className="text-center text-blue-500">
-        This is the home page of the app!
+        Our page header: {props.layout}
       </HeadingOne>
     </>
   );
