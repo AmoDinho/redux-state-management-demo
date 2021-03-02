@@ -18,7 +18,10 @@ const SecondPage = (props) => {
         className="border border-pink-500 "
         onChange={(e) => setMountainName(e.currentTarget.value)}
       />
-      <button onClick={() => props.addNewMountain(mountainName)}>
+      <button
+        className="rounded-lg bg-red-600 px-2 py-2 ml-3 text-red-200 "
+        onClick={() => props.addNewMountain(mountainName)}
+      >
         Add mountain
       </button>
     </div>
