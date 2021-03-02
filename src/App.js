@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 const App = (props) => {
   return (
     <div>
-      <h1 className="text-center text-3xl">{props.layout}</h1>
+      <h1 className="text-center text-3xl text-blue-600">{props.layout}</h1>
       <Routes />
     </div>
   );

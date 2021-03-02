@@ -13,7 +13,7 @@ const SecondPage = (props) => {
   }, []);
 
   return (
-    <div className="flex justify-center">
+    <div className="grid  grid-rows-2 place-items-center">
       <div>
         <input
           className="border border-pink-500 "
