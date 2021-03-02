@@ -1,1 +1,2 @@
 export const SET_PAGE_HEADER = "SET_PAGE_HEADER";
+export const ADD_NEW_MOUNTAIN = "ADD_NEW_MOUNTAIN";
