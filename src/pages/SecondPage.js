@@ -10,11 +10,16 @@ const SecondPage = (props) => {
     });
   }, []);
   return (
-    <>
+    <div>
       <HeadingOne className="text-center text-blue-500">
         SecondPage page{" "}
       </HeadingOne>
-    </>
+
+      <div>
+        <input />
+        <button>Add mountain</button>
+      </div>
+    </div>
   );
 };
 
