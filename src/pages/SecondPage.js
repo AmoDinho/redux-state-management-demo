@@ -1,4 +1,5 @@
 import * as layoutActions from "../actions/layoutActions";
+import * as mountainActions from "../actions/moutainActions";
 import React, { useEffect } from "react";
 import HeadingOne from "../components/HeadingOne";
 import { bindActionCreators } from "redux";
@@ -34,6 +35,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    addNewMountain: bindActionCreators(
+      mountainActions.addNewMountain,
+      dispatch
+    ),
     setPageMetadata: bindActionCreators(layoutActions.setPageHeader, dispatch),
   };
 };
