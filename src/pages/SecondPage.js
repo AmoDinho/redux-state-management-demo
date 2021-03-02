@@ -19,7 +19,7 @@ const SecondPage = (props) => {
       </HeadingOne>
 
       <div>
-        <input />
+        <input onChange={(e) => setMountainName(e.currentTarget.value)} />
         <button onClick={() => props.addNewMountain(mountainName)}>
           Add mountain
         </button>
