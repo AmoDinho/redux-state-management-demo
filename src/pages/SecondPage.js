@@ -14,7 +14,10 @@ const SecondPage = (props) => {
 
   return (
     <div className="flex justify-center">
-      <input onChange={(e) => setMountainName(e.currentTarget.value)} />
+      <input
+        className="border border-pink-500 "
+        onChange={(e) => setMountainName(e.currentTarget.value)}
+      />
       <button onClick={() => props.addNewMountain(mountainName)}>
         Add mountain
       </button>
