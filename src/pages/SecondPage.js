@@ -3,15 +3,17 @@ import React, { useEffect } from "react";
 import HeadingOne from "../components/HeadingOne";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-const Index = (props) => {
+const SecondPage = (props) => {
   useEffect(() => {
     props.setPageMetadata({
-      pageTitle: "Home Page",
+      pageTitle: "SecondPage",
     });
   }, []);
   return (
     <>
-      <HeadingOne className="text-center text-blue-500">Index page </HeadingOne>
+      <HeadingOne className="text-center text-blue-500">
+        SecondPage page{" "}
+      </HeadingOne>
     </>
   );
 };
@@ -30,4 +32,4 @@ const mapDispatchToProps = (dispatch) => {
     setPageMetadata: bindActionCreators(layoutActions.setPageHeader, dispatch),
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default connect(mapStateToProps, mapDispatchToProps)(SecondPage);
