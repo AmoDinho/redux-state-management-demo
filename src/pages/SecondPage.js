@@ -14,16 +14,24 @@ const SecondPage = (props) => {
 
   return (
     <div className="flex justify-center">
-      <input
-        className="border border-pink-500 "
-        onChange={(e) => setMountainName(e.currentTarget.value)}
-      />
-      <button
-        className="rounded-lg bg-red-600 px-2 py-2 ml-3 text-red-200 "
-        onClick={() => props.addNewMountain(mountainName)}
-      >
-        Add mountain
-      </button>
+      <div>
+        <input
+          className="border border-pink-500 "
+          onChange={(e) => setMountainName(e.currentTarget.value)}
+        />
+        <button
+          className="rounded-lg bg-red-600 px-2 py-2 ml-3 text-red-200 "
+          onClick={() => props.addNewMountain(mountainName)}
+        >
+          Add mountain
+        </button>
+      </div>
+
+      <div className="flex flex-col">
+        {props.mountains.map((mountain, idx) => (
+          <p key={idx}>{mountain}</p>
+        ))}
+      </div>
     </div>
   );
 };
@@ -31,7 +39,7 @@ const SecondPage = (props) => {
 const mapStateToProps = (state, ownProps) => {
   console.log("state", state);
   return {
-    layout: state.layoutsReducer.pageTitle,
+    mountains: state.mountainReducer,
   };
 };
 
