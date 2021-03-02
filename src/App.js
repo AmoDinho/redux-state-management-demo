@@ -1,9 +1,17 @@
 import * as layoutActions from "./actions/layoutActions";
-import React from "react";
+import React .{useEffect}from "react";
 import Routes from "./routes";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-const App = () => <Routes />;
+const App = (props) => {
+
+  return (
+    <div>
+        <p>{props.layout}</p>
+      <Routes />
+    </div>
+  );
+};
 
 const mapStateToProps = (state, ownProps) => {
   console.log("state", state);
