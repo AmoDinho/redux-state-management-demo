@@ -6,7 +6,6 @@ export const mountainReducer = (state = initalState.mountains, action) => {
   switch (action.type) {
     case types.ADD_NEW_MOUNTAIN:
       s.push(action.result);
-      s.mountains = s;
       return s;
     default:
       return state;
