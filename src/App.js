@@ -15,9 +15,7 @@ const App = (props) => {
 const mapStateToProps = (state, ownProps) => {
   console.log("state", state);
   return {
-    layout: state.layoutsReducer.pageHeader
-      ? state.layoutsReducer.pageHeader.pageTitle.pageTitle
-      : "",
+    layout: state.layoutsReducer.pageTitle,
   };
 };
 
