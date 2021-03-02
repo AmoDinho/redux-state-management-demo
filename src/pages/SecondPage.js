@@ -13,17 +13,11 @@ const SecondPage = (props) => {
   }, []);
 
   return (
-    <div>
-      <HeadingOne className="text-center text-blue-500">
-        SecondPage page{" "}
-      </HeadingOne>
-
-      <div>
-        <input onChange={(e) => setMountainName(e.currentTarget.value)} />
-        <button onClick={() => props.addNewMountain(mountainName)}>
-          Add mountain
-        </button>
-      </div>
+    <div className="flex justify-center">
+      <input onChange={(e) => setMountainName(e.currentTarget.value)} />
+      <button onClick={() => props.addNewMountain(mountainName)}>
+        Add mountain
+      </button>
     </div>
   );
 };
