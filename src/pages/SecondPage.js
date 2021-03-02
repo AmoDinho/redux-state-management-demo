@@ -1,15 +1,17 @@
 import * as layoutActions from "../actions/layoutActions";
 import * as mountainActions from "../actions/moutainActions";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import HeadingOne from "../components/HeadingOne";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 const SecondPage = (props) => {
+  const [mountainName, setMountainName] = useState("");
   useEffect(() => {
     props.setPageMetadata({
       pageTitle: "SecondPage",
     });
   }, []);
+
   return (
     <div>
       <HeadingOne className="text-center text-blue-500">
@@ -18,7 +20,9 @@ const SecondPage = (props) => {
 
       <div>
         <input />
-        <button>Add mountain</button>
+        <button onClick={() => props.addNewMountain(mountainName)}>
+          Add mountain
+        </button>
       </div>
     </div>
   );
