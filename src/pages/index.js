@@ -3,14 +3,16 @@ import React, { useEffect } from "react";
 import HeadingOne from "../components/HeadingOne";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-const Index = () => {
+const Index = (props) => {
   useEffect(() => {
     props.setPageMetadata({
-      title: "Index Page",
+      pageTitle: "Index Page",
     });
   }, []);
   return (
     <>
+      {props.layout}
+
       <HeadingOne className="text-center text-blue-500">
         This is the home page of the app!
       </HeadingOne>
@@ -21,7 +23,9 @@ const Index = () => {
 const mapStateToProps = (state, ownProps) => {
   console.log("state", state);
   return {
-    layout: state.pageHeader,
+    layout: state.layoutsReducer.pageHeader
+      ? state.layoutsReducer.pageHeader.pageTitle.pageTitle
+      : "",
   };
 };
 
