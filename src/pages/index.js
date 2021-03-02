@@ -11,9 +11,7 @@ const Index = (props) => {
   }, []);
   return (
     <>
-      <HeadingOne className="text-center text-blue-500">
-        Our page header: {props.layout}
-      </HeadingOne>
+      <HeadingOne className="text-center text-blue-500">Index page </HeadingOne>
     </>
   );
 };
